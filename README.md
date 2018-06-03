@@ -1,7 +1,11 @@
 ## Purpose
 
 This is a cool module I wrote related to signals in ECSE. The intent here is to solve the following:
-*how do you guess the frequencies that make up a signal (with noise)?*. There are two conditions for which
+
+
+*how do you guess the frequencies that make up a signal (with noise)?*.
+
+There are two conditions for which
 I chose to write this:
 
 1. you receive a list of measurements, which can be at random intervals or not;
@@ -38,20 +42,24 @@ frequencies signify the **the actual frequency of the signal.**
 ## How to Use
 
 1. Find some data, in the form of two-value lists inside a list. Values need not be sorted. Example:
+
 [[val_1, time_1], [val_2, time_2], ... [val_n, time_n]]
 
 2. Find least-squares values by using the *boursht* function.
+
 results = boursht(data)
 
 3. Find the least-squares peaks using *salam* function.
+
 frequencies = salam(results)
 
 4. Optionally, graph your results using the *klobasa* function.
+
 klobasa(results)
 
 ## Examples
 
-(This is taken directly from the *if __name__ == '__main__'*)
+(This is taken directly from the *`if __name__ == '__main__'`*)
 
     ## show an example graph, using random module for messed-up measurement data
     # (can be modified, so have fun)
